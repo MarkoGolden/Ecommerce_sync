@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Shopping Hub</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+        background-color: #f0f0f0;
+        width: 750px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #content {
+        float: left;
+        background-color: white;
+        border: 3px solid #aaa;
+        border-top: none;
+        padding: 25px;
+        width: 500px;
+      }
+
+      #sidebar {
+        float: right;
+        width: 175px;
+      }
+
+      #footer {
+        clear: both;
+      }
+
+      #header, #about, #getting-started {
+        padding-left: 75px;
+        padding-right: 30px;
+      }
+
+
+      #header {
+       <!-- background-image: url("assets/rails.png"); -->
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>Catch the Developers on Social Network!</h3>
+            <ul class="links">
+              <li><a href="https://www.facebook.com/shiva.hemanth">Project Manager</a></li>
+              <li><a href="https://www.facebook.com/sudheer.nannapaneni.9?fref=ts">Developer</a></li>
+              <li><a href="https://www.facebook.com/bhaskarareddyav.av?fref=ts">Multi Technology Specialist</a></li>
+              <li><a href="https://www.facebook.com/pardhu101?fref=ts">Overseas Techinical Support</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+        
+      <div id="content">
+	<div>
+          <img src="assets/rails.png" height="180px">
+        </div>
+        <div id="header">
+          <h1>Online Shopping Hub</h1>
+          <h2>A group owned by Brillance-Works... welcome aboard</h2>
+        </div>
+
+        <div id="about">
+          <h3><a href="orders/new_order" >Place a Order</a></h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <h1>Getting started</h1>
+          <h2>Register with us to avail great benefits :
+           <u> <a href="users/sign_up"> Register here </a></u></h2>
+
+	<h1>Existing Users</h1>
+          <h2>Sign in here :
+           <u> <a href="users/sign_in"> Sign in </a></u></h2>
+
+	<h1>Click here to place order without sign up</h1>
+          <h2>Guest user:
+           <u> <a href="orders	/new_order"> Place order</a></u></h2>
+
+
+
+          <ul >
+            <li>
+              <h2>It's an amazing and awesome one stop shopping where you can avail and place order for instant delivery <h5>To see all available options and updates, Register with us  .<a href="users/sign_up"> Register here </a></h5></h2>
+              
+            </li>
+   </ul>
+        </div>
+      </div>
+
+      <div id="footer">&nbsp;</div>
+    </div>
+  </body>
+</html>
